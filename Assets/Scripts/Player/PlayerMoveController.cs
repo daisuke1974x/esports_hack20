@@ -61,7 +61,7 @@ public class PlayerMoveController : MonoBehaviour
         }
 
         //  テンキーや3Dスティックの入力（GetAxis）がゼロの時の動作
-        animCtr.SetBool("doMove", useMoveKey());
+        //animCtr.SetBool("doMove", useMoveKey());
 
         //=================================================================
         // ▼▼▼ジャンプと落下の処理▼▼▼

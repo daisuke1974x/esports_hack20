@@ -7,13 +7,13 @@ public class DualshockInputController : MonoBehaviour, IVirtualController
 {
     public PlayerStatics.Player player = PlayerStatics.Player.one;
 
-    string inputNameVertical = "RightAnalogStick_Y_";
-    string inputNameHorizontal = "RightAnalogStick_X_";
+    string inputNameVertical = "LeftAnalogStick_Y_";
+    string inputNameHorizontal = "LeftAnalogStick_X_";
+    string inputNameHorizontalCamera = "RightAnalogStick_X_";
+    string inputNameVerticalCamera = "RightAnalogStick_Y_";
     string inputNameJump = "Jump_";
     string inputNameFire1 = "Fire_";    
     string inputNameL1 = "L1_";
-    string inputNameHorizontalCamera = "LeftAnalogStick_X_";
-    string inputNameVerticalCamera = "LeftAnalogStick_Y_";
 
     // Start is called before the first frame update
     void Start()
