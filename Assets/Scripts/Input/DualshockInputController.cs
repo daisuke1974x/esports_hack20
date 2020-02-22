@@ -41,10 +41,20 @@ public class DualshockInputController : MonoBehaviour, IVirtualController
     }
     public float GetCameraVertical()
     {
-        return Input.GetAxis(inputNameVerticalCamera);
+        float _input = Input.GetAxis(inputNameVerticalCamera);
+        if (Mathf.Abs(_input) < 0.2F)
+        {
+            return 0F;
+        }
+        return _input;
     }
     public float GetCameraHorizontal()
     {
+        float _input = Input.GetAxis(inputNameHorizontalCamera);
+        if (Mathf.Abs(_input) < 0.2F)
+        {
+            return 0F;
+        }
         return Input.GetAxis(inputNameHorizontalCamera);
     }
     public bool GetCameraModeButton()
