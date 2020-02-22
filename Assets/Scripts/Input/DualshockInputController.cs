@@ -23,11 +23,21 @@ public class DualshockInputController : MonoBehaviour, IVirtualController
 
     public float GetMoveVertical()
     {
-        return Input.GetAxis(inputNameVertical);
+        float _input = Input.GetAxisRaw(inputNameVertical);
+        if ( Mathf.Abs(_input) < 0.2F)
+        {
+            return 0F;
+        }
+        return _input;
     }
     public float GetMoveHorizontal()
     {
-        return Input.GetAxis(inputNameHorizontal);
+        float _input = Input.GetAxisRaw(inputNameHorizontal);
+        if (Mathf.Abs(_input) < 0.2F)
+        {
+            return 0F;
+        }
+        return _input;
     }
     public float GetCameraVertical()
     {
